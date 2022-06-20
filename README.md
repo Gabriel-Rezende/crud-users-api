@@ -20,3 +20,14 @@ Aceita apenas requisições DELETE e deleta do banco de dados o usuário com id 
 
 ### - 'edit_user/<int:pk>/',
 Aceita apenas requisições do tipo PUT, recebendo no corpo da requisição um JSON contendo qual dado deseja alterar, exemplo "{'nome': 'Fulano', 'telefone': '(11) 98765-4321}" de modo que o usuário com id informado terá seu nome alterado para 'Fulano' e telefone alterado também. Caso seja necessário editar mais ou menos campos, basta adicionar ou remover na requisição o campo informado juntamente com o valor correspondente. 
+
+## Como executar
+
+- Faça o clone do repositório: git clone https://github.com/Gabriel-Rezende/crud-users-api.git
+- Entre na pasta bridgehub:  cd .\crud-users-api\bridgehub\
+- Ative uma venv: source venv/bin/activate
+- Instale os requirements: pip3 install -r requirements.txt
+- Execute: python manage.py runserver
+- Para testar, use: python manage.py test
+
+- Após isso, será executado no seu localhost na porta 8000 a API. Requisições deverão ser feitas na URL base 'http:127.0.0.1:8000/' colocando o endpoint na frente. Exemplo: 'http:127.0.0.1:8000/users/'
